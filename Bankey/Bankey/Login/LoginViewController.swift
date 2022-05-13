@@ -8,6 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    let titleLabel = UILabel()
+    let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
@@ -32,6 +34,18 @@ class LoginViewController: UIViewController {
 extension LoginViewController{
     
     private func style(){
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.text = "Bankey"
+        
+        subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subtitleLabel.textAlignment = .center
+        subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        subtitleLabel.adjustsFontSizeToFitWidth = true
+        subtitleLabel.text = "Your premium source for all things banking!"
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -48,9 +62,24 @@ extension LoginViewController{
     }
     
     private func layout(){
+        view.addSubview(titleLabel)
+        view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
+        
+        //Title Layout
+        NSLayoutConstraint.activate([
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 4),
+            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        //Subtitle layout
+        NSLayoutConstraint.activate([
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
+            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
+            subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+        ])
         
         //LoginView Layout
         NSLayoutConstraint.activate([
@@ -89,6 +118,7 @@ extension LoginViewController{
         }
         if username.isEmpty || password.isEmpty{
             configureView(withMessage: "Username / password cannot be blank!")
+            return
         }
         
         if username == "Luism3861" && password == "1234"{
