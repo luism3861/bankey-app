@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "05AFA66E-D62D-4195-8746-7F1689C52FF2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Bankey/Login/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4 - 48b3b4190bdd907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bankey.LoginViewController.login() -&gt; ()"
+                  moduleName = "Bankey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luis_madina/Developer/iOS-Development/bankey-app/Bankey/Bankey/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4 - 48b3b4190bdd907"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Bankey.LoginViewController.login() -&gt; ()"
+                  moduleName = "Bankey"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/luis_madina/Developer/iOS-Development/bankey-app/Bankey/Bankey/Login/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "118">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
