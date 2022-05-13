@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
 		F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC34D2824780A00B94335 /* AppDelegate.swift */; };
-		F86EC3522824780A00B94335 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* ViewController.swift */; };
+		F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* LoginViewController.swift */; };
 		F86EC3572824780B00B94335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86EC3562824780B00B94335 /* Assets.xcassets */; };
 		F86EC35A2824780B00B94335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EC3582824780B00B94335 /* LaunchScreen.storyboard */; };
-		F86EC3652824780B00B94335 /* BankeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3642824780B00B94335 /* BankeyTests.swift */; };
-		F86EC36F2824780B00B94335 /* BankeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC36E2824780B00B94335 /* BankeyUITests.swift */; };
-		F86EC3712824780B00B94335 /* BankeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3702824780B00B94335 /* BankeyUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,17 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F866E26E282571F200397F36 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F86EC34A2824780A00B94335 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC34D2824780A00B94335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F86EC3512824780A00B94335 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F86EC3512824780A00B94335 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F86EC3562824780B00B94335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F86EC3592824780B00B94335 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F86EC35B2824780B00B94335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86EC3602824780B00B94335 /* BankeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F86EC3642824780B00B94335 /* BankeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyTests.swift; sourceTree = "<group>"; };
 		F86EC36A2824780B00B94335 /* BankeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F86EC36E2824780B00B94335 /* BankeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITests.swift; sourceTree = "<group>"; };
-		F86EC3702824780B00B94335 /* BankeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +68,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F866E26C28255DA200397F36 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				F86EC3562824780B00B94335 /* Assets.xcassets */,
+				F86EC3582824780B00B94335 /* LaunchScreen.storyboard */,
+				F86EC35B2824780B00B94335 /* Info.plist */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+		F866E26D282571B800397F36 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F86EC3512824780A00B94335 /* LoginViewController.swift */,
+				F866E26E282571F200397F36 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		F86EC3412824780A00B94335 = {
 			isa = PBXGroup;
 			children = (
 				F86EC34C2824780A00B94335 /* Bankey */,
-				F86EC3632824780B00B94335 /* BankeyTests */,
-				F86EC36D2824780B00B94335 /* BankeyUITests */,
 				F86EC34B2824780A00B94335 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,30 +108,11 @@
 		F86EC34C2824780A00B94335 /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				F866E26D282571B800397F36 /* Login */,
 				F86EC34D2824780A00B94335 /* AppDelegate.swift */,
-				F86EC3512824780A00B94335 /* ViewController.swift */,
-				F86EC3562824780B00B94335 /* Assets.xcassets */,
-				F86EC3582824780B00B94335 /* LaunchScreen.storyboard */,
-				F86EC35B2824780B00B94335 /* Info.plist */,
+				F866E26C28255DA200397F36 /* Files */,
 			);
 			path = Bankey;
-			sourceTree = "<group>";
-		};
-		F86EC3632824780B00B94335 /* BankeyTests */ = {
-			isa = PBXGroup;
-			children = (
-				F86EC3642824780B00B94335 /* BankeyTests.swift */,
-			);
-			path = BankeyTests;
-			sourceTree = "<group>";
-		};
-		F86EC36D2824780B00B94335 /* BankeyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F86EC36E2824780B00B94335 /* BankeyUITests.swift */,
-				F86EC3702824780B00B94335 /* BankeyUITestsLaunchTests.swift */,
-			);
-			path = BankeyUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +245,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86EC3522824780A00B94335 /* ViewController.swift in Sources */,
+				F866E26F282571F200397F36 /* LoginView.swift in Sources */,
+				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86EC3652824780B00B94335 /* BankeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86EC3712824780B00B94335 /* BankeyUITestsLaunchTests.swift in Sources */,
-				F86EC36F2824780B00B94335 /* BankeyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
