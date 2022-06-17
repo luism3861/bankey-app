@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
+		F842C12D28543E110077AC20 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F842C12C28543E110077AC20 /* OnboardingViewController.swift */; };
 		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
 		F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC34D2824780A00B94335 /* AppDelegate.swift */; };
 		F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* LoginViewController.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		F842C12C28543E110077AC20 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F866E26E282571F200397F36 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F86EC34A2824780A00B94335 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC34D2824780A00B94335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */,
 				F8A8DC832837007200426EAF /* OnboardingSubViewControllers.swift */,
+				F842C12C28543E110077AC20 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F866E26F282571F200397F36 /* LoginView.swift in Sources */,
+				F842C12D28543E110077AC20 /* OnboardingViewController.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 				F8A8DC842837007200426EAF /* OnboardingSubViewControllers.swift in Sources */,
@@ -429,9 +433,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SP79Q2MD42;
+				DEVELOPMENT_TEAM = 8Q3D3GS87P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bankey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bankey;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -442,7 +447,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luism3861.Bankey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luism.bankey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -457,9 +462,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SP79Q2MD42;
+				DEVELOPMENT_TEAM = 8Q3D3GS87P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Bankey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bankey;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -470,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.luism3861.Bankey;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luism.bankey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
