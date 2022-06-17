@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    var imageView = UIImageView()
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     let loginView = LoginView()
@@ -33,7 +34,34 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController{
     
+   private func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+
+       
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    
+    
     private func style(){
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView  = UIImageView(frame:CGRect(x: 135, y: 135, width: 100, height: 100));
+        imageView.image = UIImage(named:"Logo.png")
+        imageView.contentMode = .scaleAspectFit
+        
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
         titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
@@ -44,12 +72,14 @@ extension LoginViewController{
         subtitleLabel.textAlignment = .center
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.adjustsFontSizeToFitWidth = true
-        subtitleLabel.text = "Your premium source for all things banking!"
+        subtitleLabel.text = "Your premium source for all things ps we!"
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.configuration = .filled()
+        signInButton.configuration?.baseBackgroundColor = hexStringToUIColor("#04bdb8")
+        signInButton.layer.cornerRadius =  5
         signInButton.configuration?.imagePadding = 8
         signInButton.setTitle("Sign In", for: [])
         signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
@@ -62,11 +92,14 @@ extension LoginViewController{
     }
     
     private func layout(){
+        view.addSubview(imageView)
         view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
+        
+ 
         
         //Title Layout
         NSLayoutConstraint.activate([
@@ -117,18 +150,18 @@ extension LoginViewController{
             return
         }
         if username.isEmpty || password.isEmpty{
-            configureView(withMessage: "Username / password cannot be blank!")
+            configureView("Username / password cannot be blank!")
             return
         }
         
         if username == "Luism3861" && password == "1234"{
             signInButton.configuration?.showsActivityIndicator = true
         }else{
-            configureView(withMessage: "Incorrect Username / Password")
+            configureView("Incorrect Username / Password")
         }
     }
     
-    private func configureView(withMessage message: String){
+    private func configureView(_ message: String){
         errorMessageLabel.isHidden = false
         errorMessageLabel.text = message
     }
