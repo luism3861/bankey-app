@@ -34,17 +34,17 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController{
     
-   private func hexStringToUIColor (_ hex:String) -> UIColor {
+    private func hexStringToUIColor (_ hex:String) -> UIColor {
         var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
+        
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-
-       
+        
+        
         var rgbValue:UInt64 = 0
         Scanner(string: cString).scanHexInt64(&rgbValue)
-
+        
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -72,10 +72,10 @@ extension LoginViewController{
         subtitleLabel.textAlignment = .center
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.adjustsFontSizeToFitWidth = true
-        subtitleLabel.text = "Your premium source for all things ps we!"
+        subtitleLabel.text = "Your premium source for all things banking!"
         
         loginView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.configuration = .filled()
         signInButton.configuration?.baseBackgroundColor = hexStringToUIColor("#04bdb8")
@@ -99,7 +99,7 @@ extension LoginViewController{
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         
- 
+        
         
         //Title Layout
         NSLayoutConstraint.activate([

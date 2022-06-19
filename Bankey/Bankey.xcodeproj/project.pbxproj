@@ -8,13 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
-		F842C12D28543E110077AC20 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F842C12C28543E110077AC20 /* OnboardingViewController.swift */; };
+		F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845C2C4285EA1800090C15A /* OnboardingViewController.swift */; };
 		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
 		F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC34D2824780A00B94335 /* AppDelegate.swift */; };
 		F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* LoginViewController.swift */; };
 		F86EC3572824780B00B94335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86EC3562824780B00B94335 /* Assets.xcassets */; };
 		F86EC35A2824780B00B94335 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F86EC3582824780B00B94335 /* LaunchScreen.storyboard */; };
-		F8A8DC842837007200426EAF /* OnboardingSubViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A8DC832837007200426EAF /* OnboardingSubViewControllers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
-		F842C12C28543E110077AC20 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F845C2C4285EA1800090C15A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F866E26E282571F200397F36 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F86EC34A2824780A00B94335 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC34D2824780A00B94335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 		F86EC35B2824780B00B94335 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F86EC3602824780B00B94335 /* BankeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC36A2824780B00B94335 /* BankeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A8DC832837007200426EAF /* OnboardingSubViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSubViewControllers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */,
-				F8A8DC832837007200426EAF /* OnboardingSubViewControllers.swift */,
-				F842C12C28543E110077AC20 /* OnboardingViewController.swift */,
+				F845C2C4285EA1800090C15A /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -263,10 +260,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F866E26F282571F200397F36 /* LoginView.swift in Sources */,
-				F842C12D28543E110077AC20 /* OnboardingViewController.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
-				F8A8DC842837007200426EAF /* OnboardingSubViewControllers.swift in Sources */,
+				F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */,
 				F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
