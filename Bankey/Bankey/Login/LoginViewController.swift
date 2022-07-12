@@ -7,13 +7,18 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject{
+    func didLogin()
+}
+
 class LoginViewController: UIViewController {
     var imageView = UIImageView()
-    let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    
+     weak var delegate: LoginViewControllerDelegate?
     
     var username: String?{
         return loginView.userNameTextField.text
@@ -58,15 +63,8 @@ extension LoginViewController{
     private func style(){
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView  = UIImageView(frame:CGRect(x: 135, y: 135, width: 100, height: 100));
-        imageView.image = UIImage(named:"Logo.png")
+        imageView.image = UIImage(named:"bank.png")
         imageView.contentMode = .scaleAspectFit
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.text = "Bankey"
         
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.textAlignment = .center
@@ -93,20 +91,17 @@ extension LoginViewController{
     
     private func layout(){
         view.addSubview(imageView)
-        view.addSubview(titleLabel)
         view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
         
-        
-        
-        //Title Layout
+        //Image Layout
         NSLayoutConstraint.activate([
-            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 4),
-            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 2),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
-        
+    
         //Subtitle layout
         NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
@@ -156,6 +151,7 @@ extension LoginViewController{
         
         if username == "Luism3861" && password == "1234"{
             signInButton.configuration?.showsActivityIndicator = true
+            delegate?.didLogin()
         }else{
             configureView("Incorrect Username / Password")
         }
@@ -167,6 +163,8 @@ extension LoginViewController{
     }
     
 }
+
+
 
 
 
