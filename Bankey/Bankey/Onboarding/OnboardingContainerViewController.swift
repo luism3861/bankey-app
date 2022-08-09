@@ -7,13 +7,29 @@
 
 import UIKit
 
+protocol OnboardingContainerViewControllerDelegate: AnyObject{
+    func didFinishOnboarding()
+}
+
 class OnboardingContainerViewController: UIViewController {
     
     let pageViewController: UIPageViewController
     var pages = [UIViewController]()
-    var currentVC: UIViewController
+    weak var delegate: OnboardingContainerViewControllerDelegate?
+    var currentVC: UIViewController{
+        didSet{
+            guard let index = pages.firstIndex(of: currentVC) else { return }
+            nextButton.isHidden = index == pages.count - 1
+            backButton.isHidden = index == 0
+            doneButton.isHidden = !nextButton.isHidden
+        }
+    }
+    let nextButton = UIButton(type:  .system)
+    let backButton = UIButton(type: .system)
     let closeButton = UIButton(type: .system)
+    let doneButton = UIButton(type: .system)
     
+  
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
@@ -41,9 +57,31 @@ class OnboardingContainerViewController: UIViewController {
         layout()
     }
     
+    private func hexStringToUIColor (_ hex:String) -> UIColor {
+        var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    
+    
+    
     
     private func setup(){
-        view.backgroundColor = .systemPurple
+        view.backgroundColor = hexStringToUIColor("#e0e0e0")
         
         addChild(pageViewController)
         view.addSubview(pageViewController.view)
@@ -64,17 +102,55 @@ class OnboardingContainerViewController: UIViewController {
     }
     
     private func style(){
+        nextButton.translatesAutoresizingMaskIntoConstraints = false
+        nextButton.setTitle("Next", for: [])
+        nextButton.titleLabel?.font = .systemFont(ofSize: 19)
+        nextButton.addTarget(self, action: #selector(nextTapped), for: .primaryActionTriggered)
+        
+        backButton.translatesAutoresizingMaskIntoConstraints = false
+        backButton.setTitle("Back", for: [])
+        backButton.titleLabel?.font = .systemFont(ofSize: 19)
+        backButton.addTarget(self, action: #selector(backTapped), for: .primaryActionTriggered)
+        
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("Close", for: [])
         closeButton.titleLabel?.font = .systemFont(ofSize: 19)
         closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
-        view.addSubview(closeButton)//add in the view hierarchy
+        
+        doneButton.translatesAutoresizingMaskIntoConstraints = false
+        doneButton.setTitle("Done", for: [])
+        doneButton.titleLabel?.font = .systemFont(ofSize: 19)
+        doneButton.addTarget(self, action: #selector(doneTapped), for: .primaryActionTriggered)
     }
     
     private func layout(){
+        view.addSubview(nextButton)
+        view.addSubview(backButton)
+        view.addSubview(closeButton)
+        view.addSubview(doneButton)
+        
+        //Next
+        NSLayoutConstraint.activate([
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: nextButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: nextButton.bottomAnchor, multiplier: 4)
+        ])
+        
+        //Back
+        NSLayoutConstraint.activate([
+            backButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 4)
+        ])
+        
+        //Close
         NSLayoutConstraint.activate([
             closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
             closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2)
+        ])
+        
+        //Done
+        NSLayoutConstraint.activate([
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 2),
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor , multiplier: 4)
         ])
     }
 }
@@ -110,9 +186,25 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
     }
 }
 
-//Mark: - Actions
+
 extension OnboardingContainerViewController{
-    @objc func closeTapped(_ sender: UIButton){
         
+    @objc func nextTapped(_ sender: UIButton){
+        guard let nextVC = getNextViewController(from: currentVC) else { return }
+        pageViewController.setViewControllers([nextVC], direction: .forward, animated: true,completion: nil)
     }
+    
+    @objc func backTapped(_ sender: UIButton){
+        guard let previousVC = getPreviousViewController(from: currentVC) else { return }
+        pageViewController.setViewControllers([previousVC], direction: .reverse, animated: true, completion: nil)
+    }
+    
+    @objc func closeTapped(_ sender: UIButton){
+        delegate?.didFinishOnboarding()
+    }
+    
+    @objc func doneTapped(_ sender: UIButton){
+        delegate?.didFinishOnboarding()
+    }
+    
 }

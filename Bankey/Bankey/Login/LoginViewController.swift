@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+protocol LogoutDelegate: AnyObject{
+    func didLogout()
+}
+
 protocol LoginViewControllerDelegate: AnyObject{
     func didLogin()
 }
@@ -18,7 +23,8 @@ class LoginViewController: UIViewController {
     let signInButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     
-     weak var delegate: LoginViewControllerDelegate?
+    
+    weak var delegate: LoginViewControllerDelegate?
     
     var username: String?{
         return loginView.userNameTextField.text
@@ -32,6 +38,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
+        loginView.userNameTextField.text = ""
+        loginView.passwordTextField.text = ""
     }
     
 }
@@ -98,10 +111,10 @@ extension LoginViewController{
         
         //Image Layout
         NSLayoutConstraint.activate([
-            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 2),
+            subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 1),
             imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
-    
+        
         //Subtitle layout
         NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
@@ -118,7 +131,7 @@ extension LoginViewController{
         
         //Button Layout
         NSLayoutConstraint.activate([
-            signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 2),
+            signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 3),
             signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
@@ -144,6 +157,7 @@ extension LoginViewController{
             assertionFailure("Username / password should never be nil")
             return
         }
+        
         if username.isEmpty || password.isEmpty{
             configureView("Username / password cannot be blank!")
             return
