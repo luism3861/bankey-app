@@ -29,7 +29,7 @@ class OnboardingContainerViewController: UIViewController {
     let closeButton = UIButton(type: .system)
     let doneButton = UIButton(type: .system)
     
-  
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
@@ -188,7 +188,7 @@ extension OnboardingContainerViewController: UIPageViewControllerDataSource {
 
 
 extension OnboardingContainerViewController{
-        
+    
     @objc func nextTapped(_ sender: UIButton){
         guard let nextVC = getNextViewController(from: currentVC) else { return }
         pageViewController.setViewControllers([nextVC], direction: .forward, animated: true,completion: nil)
