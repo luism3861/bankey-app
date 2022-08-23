@@ -99,6 +99,7 @@ extension LoginViewController{
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.textColor = .red
         errorMessageLabel.numberOfLines = 0
+        errorMessageLabel.adjustsFontSizeToFitWidth = true
         errorMessageLabel.isHidden = true
     }
     
@@ -108,7 +109,7 @@ extension LoginViewController{
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(errorMessageLabel)
-        
+
         //Image Layout
         NSLayoutConstraint.activate([
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 1),
@@ -117,7 +118,7 @@ extension LoginViewController{
         
         //Subtitle layout
         NSLayoutConstraint.activate([
-            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
             subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])

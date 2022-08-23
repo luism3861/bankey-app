@@ -67,7 +67,7 @@ extension LoginView{
             bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
         ])
         
-        dividerView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        dividerView.heightAnchor.constraint(equalToConstant: 1.5).isActive = true
     }
 }
 
