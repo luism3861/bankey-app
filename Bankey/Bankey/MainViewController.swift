@@ -8,31 +8,31 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         setupTabBar()
     }
-
+    
     private func setupViews() {
         let summaryVC = AccountSummaryViewController()
         let moneyVC = MoveMoneyViewController()
         let moreVC = MoreViewController()
-
+        
         summaryVC.setTabBarImage("list.dash.header.rectangle", "Summary")
         moneyVC.setTabBarImage("arrow.left.arrow.right", "Move Money")
         moreVC.setTabBarImage("ellipsis.circle", "More")
-
+        
         let summaryNC = UINavigationController(rootViewController: summaryVC)
         let moneyNC = UINavigationController(rootViewController: moneyVC)
         let moreNC = UINavigationController(rootViewController: moreVC)
-
+        
         summaryNC.navigationBar.barTintColor = appColor
         hideNavigationBarLine(summaryNC.navigationBar)
         
         let tabBarList = [summaryNC, moneyNC, moreNC]
-
+        
         viewControllers = tabBarList
     }
     //this hide header for navigation controller by default
