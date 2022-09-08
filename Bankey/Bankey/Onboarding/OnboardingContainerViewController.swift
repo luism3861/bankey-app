@@ -14,6 +14,11 @@ protocol OnboardingContainerViewControllerDelegate: AnyObject{
 class OnboardingContainerViewController: UIViewController {
     
     let pageViewController: UIPageViewController
+    let nextButton = UIButton(type:  .system)
+    let backButton = UIButton(type: .system)
+    let closeButton = UIButton(type: .system)
+    let doneButton = UIButton(type: .system)
+    
     var pages = [UIViewController]()
     weak var delegate: OnboardingContainerViewControllerDelegate?
     var currentVC: UIViewController{
@@ -24,10 +29,7 @@ class OnboardingContainerViewController: UIViewController {
             doneButton.isHidden = !nextButton.isHidden
         }
     }
-    let nextButton = UIButton(type:  .system)
-    let backButton = UIButton(type: .system)
-    let closeButton = UIButton(type: .system)
-    let doneButton = UIButton(type: .system)
+  
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -109,13 +111,13 @@ class OnboardingContainerViewController: UIViewController {
         //Next
         NSLayoutConstraint.activate([
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: nextButton.trailingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: nextButton.bottomAnchor, multiplier: 4)
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: nextButton.bottomAnchor, multiplier: 3)
         ])
         
         //Back
         NSLayoutConstraint.activate([
             backButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 4)
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: backButton.bottomAnchor, multiplier: 3)
         ])
         
         //Close
@@ -127,7 +129,7 @@ class OnboardingContainerViewController: UIViewController {
         //Done
         NSLayoutConstraint.activate([
             view.trailingAnchor.constraint(equalToSystemSpacingAfter: doneButton.trailingAnchor, multiplier: 2),
-            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor , multiplier: 4)
+            view.bottomAnchor.constraint(equalToSystemSpacingBelow: doneButton.bottomAnchor , multiplier: 3)
         ])
     }
 }
