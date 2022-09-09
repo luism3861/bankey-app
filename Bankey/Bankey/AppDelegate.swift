@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let onboardingContainerViewController = OnboardingContainerViewController()
     let dummyViewController = DummyViewController()
     let mainViewController = MainViewController()
+    let accountSummaryController = AccountSummaryViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         window = UIWindow(frame:  UIScreen.main.bounds)
@@ -27,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         onboardingContainerViewController.delegate = self
         dummyViewController.logoutDelegate = self
         
-        window?.rootViewController = mainViewController
+        window?.rootViewController = accountSummaryController
         return true
     }
 }
