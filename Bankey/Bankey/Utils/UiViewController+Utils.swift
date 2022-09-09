@@ -17,7 +17,7 @@ extension UIViewController{
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
     }
-    
+
     func setTabBarImage(_ imageName: String, _ title: String){
         let configuration = UIImage.SymbolConfiguration(scale: .large)
         let image = UIImage(systemName: imageName, withConfiguration: configuration)
