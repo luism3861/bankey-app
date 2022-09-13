@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController{
     private func style(){
-    
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named:"bank.png")
         imageView.contentMode = .scaleAspectFit

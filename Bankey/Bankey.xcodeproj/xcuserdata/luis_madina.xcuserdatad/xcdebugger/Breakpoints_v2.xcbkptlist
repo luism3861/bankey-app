@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Bankey/Login/LoginViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "login()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4 - 48b3b4190bdd907"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bankey.LoginViewController.login() -&gt; ()"
-                  moduleName = "Bankey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luis_madina/Developer/iOS-Development/bankey-app/Bankey/Bankey/Login/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "69">
-               </Location>
-               <Location
-                  uuid = "27AC9764-A37C-435D-BF6F-D35B40D7A1B4 - 48b3b4190bdd907"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Bankey.LoginViewController.login() -&gt; ()"
-                  moduleName = "Bankey"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luis_madina/Developer/iOS-Development/bankey-app/Bankey/Bankey/Login/LoginViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "118">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B3721A4C-6D7A-41BC-B061-B7366F4160A3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
