@@ -66,12 +66,12 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="3ha-x2-aIj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="F9T-VV-TU7"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3ha-x2-aIj" secondAttribute="trailing" constant="16" id="Fla-1V-4Qk"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3ha-x2-aIj" secondAttribute="trailing" priority="999" constant="16" id="Fla-1V-4Qk"/>
                 <constraint firstItem="3ha-x2-aIj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="LD1-cB-Gti"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3ha-x2-aIj" secondAttribute="bottom" constant="16" id="Xn6-Ae-bct"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3ha-x2-aIj" secondAttribute="bottom" priority="999" constant="16" id="Xn6-Ae-bct"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="624.63768115942037" y="-54.241071428571423"/>
+            <point key="canvasLocation" x="1101" y="-25"/>
         </view>
     </objects>
     <resources>
