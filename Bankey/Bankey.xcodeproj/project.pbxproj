@@ -10,6 +10,7 @@
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
 		F8407D9C288AFD49000C952C /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8407D9B288AFD49000C952C /* DummyViewController.swift */; };
 		F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845C2C4285EA1800090C15A /* OnboardingViewController.swift */; };
+		F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */; };
 		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
 		F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC34D2824780A00B94335 /* AppDelegate.swift */; };
 		F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* LoginViewController.swift */; };
@@ -44,6 +45,7 @@
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F8407D9B288AFD49000C952C /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		F845C2C4285EA1800090C15A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		F866E26E282571F200397F36 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F86EC34A2824780A00B94335 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC34D2824780A00B94335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,23 @@
 				F845C2C4285EA1800090C15A /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F8657AF528D14C2100AE3E04 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				F887D08D28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift */,
+				F887D08F28CBDC10004C50A8 /* AccountSummaryHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		F8657AF628D14C6D00AE3E04 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F866E26C28255DA200397F36 /* Files */ = {
@@ -151,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				F887D08B28CB9F91004C50A8 /* AccountSummaryViewController.swift */,
-				F887D08D28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift */,
-				F887D08F28CBDC10004C50A8 /* AccountSummaryHeaderView.xib */,
+				F8657AF628D14C6D00AE3E04 /* Cells */,
+				F8657AF528D14C2100AE3E04 /* Header */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -303,6 +322,7 @@
 				F887D08E28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift in Sources */,
 				F8407D9C288AFD49000C952C /* DummyViewController.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
+				F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 				F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */,
 				F887D08C28CB9F91004C50A8 /* AccountSummaryViewController.swift in Sources */,
