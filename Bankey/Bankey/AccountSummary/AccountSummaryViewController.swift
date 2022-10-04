@@ -14,16 +14,13 @@ class AccountSummaryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupTableView()
         setupTableHeaderView()
         fetchData()
     }
 }
 
 extension AccountSummaryViewController{
-    private func setup(){
-        setupTableView()
-    }
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
