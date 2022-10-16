@@ -22,6 +22,7 @@ class AccountSummaryViewController: UIViewController{
 
 extension AccountSummaryViewController{
     private func setupTableView(){
+        tableView.backgroundColor = appColor
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -64,8 +65,8 @@ extension AccountSummaryViewController{
                                                        accountName: "Tax-Free Saver",
                                                        balance: 2000.00)
         let investment2 = AccountSummaryCell.ViewModel(accountType: .Investment,
-                                                       accountName: "Growth Fund",
-                                                       balance: 15000.00)
+                                                       accountName: "Tax-Free",
+                                                       balance: 233903.4523)
 
         accounts.append(savings)
         accounts.append(chequing)

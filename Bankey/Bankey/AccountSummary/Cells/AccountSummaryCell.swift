@@ -82,7 +82,7 @@ extension AccountSummaryCell{
         //balanceAmountLabel
         balanceAmountLabel.translatesAutoresizingMaskIntoConstraints = false
         balanceAmountLabel.textAlignment = .right
-        balanceAmountLabel.attributedText  = makeFormattedBalance("XXX", "XX")
+        balanceAmountLabel.attributedText  = makeFormattedBalance("XXX,XXX","XX")
         
         //Add two labels stackview
         balanceStackView.addArrangedSubview(balanceLabel)

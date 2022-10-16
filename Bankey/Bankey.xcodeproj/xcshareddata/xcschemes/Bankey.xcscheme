@@ -48,6 +48,17 @@
                ReferencedContainer = "container:Bankey.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8614D0928F9D3D900C5EB2D"
+               BuildableName = "BankeyUnitTests.xctest"
+               BlueprintName = "BankeyUnitTests"
+               ReferencedContainer = "container:Bankey.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
