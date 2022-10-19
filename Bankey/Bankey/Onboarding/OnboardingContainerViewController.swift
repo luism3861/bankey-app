@@ -93,11 +93,13 @@ class OnboardingContainerViewController: UIViewController {
         
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.setTitle("Close", for: [])
+        closeButton.tintColor = .red
         closeButton.titleLabel?.font = .systemFont(ofSize: 19)
         closeButton.addTarget(self, action: #selector(closeTapped), for: .primaryActionTriggered)
         
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         doneButton.setTitle("Done", for: [])
+        doneButton.tintColor = .red
         doneButton.titleLabel?.font = .systemFont(ofSize: 19)
         doneButton.addTarget(self, action: #selector(doneTapped), for: .primaryActionTriggered)
     }

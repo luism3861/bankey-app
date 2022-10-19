@@ -14,17 +14,15 @@ class AccountSummaryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupTableView()
         setupTableHeaderView()
         fetchData()
     }
 }
 
 extension AccountSummaryViewController{
-    private func setup(){
-        setupTableView()
-    }
     private func setupTableView(){
+        tableView.backgroundColor = appColor
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -51,13 +49,31 @@ extension AccountSummaryViewController{
     }
     
     private func fetchData(){
-        let savings = AccountSummaryCell.ViewModel(accountType: .Banking, accountName: "Basic Savings")
-        let visa =  AccountSummaryCell.ViewModel(accountType: .CreditCard, accountName: "Visa Avion Card")
-        let investment = AccountSummaryCell.ViewModel(accountType: .Investment, accountName: "Tax-Free Saver")
-        
+        let savings = AccountSummaryCell.ViewModel(accountType: .Banking,
+                                                            accountName: "Basic Savings",
+                                                        balance: 929466.23)
+        let chequing = AccountSummaryCell.ViewModel(accountType: .Banking,
+                                                    accountName: "No-Fee All-In Chequing",
+                                                    balance: 17562.44)
+        let visa = AccountSummaryCell.ViewModel(accountType: .CreditCard,
+                                                       accountName: "Visa Avion Card",
+                                                       balance: 412.83)
+        let masterCard = AccountSummaryCell.ViewModel(accountType: .CreditCard,
+                                                       accountName: "Student Mastercard",
+                                                       balance: 50.83)
+        let investment1 = AccountSummaryCell.ViewModel(accountType: .Investment,
+                                                       accountName: "Tax-Free Saver",
+                                                       balance: 2000.00)
+        let investment2 = AccountSummaryCell.ViewModel(accountType: .Investment,
+                                                       accountName: "Tax-Free",
+                                                       balance: 233903.4523)
+
         accounts.append(savings)
+        accounts.append(chequing)
         accounts.append(visa)
-        accounts.append(investment)
+        accounts.append(masterCard)
+        accounts.append(investment1)
+        accounts.append(investment2)
     }
 }
 
