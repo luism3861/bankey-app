@@ -12,6 +12,7 @@
 		F8614D1428F9D7D500C5EB2D /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8614D1328F9D7D500C5EB2D /* CurrencyFormatterTests.swift */; };
 		F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */; };
 		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
+		F86CA186290AF0C800BDD8D7 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CA185290AF0C800BDD8D7 /* NSNotificationName.swift */; };
 		F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC34D2824780A00B94335 /* AppDelegate.swift */; };
 		F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EC3512824780A00B94335 /* LoginViewController.swift */; };
 		F86EC3572824780B00B94335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F86EC3562824780B00B94335 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		F887D08C28CB9F91004C50A8 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F887D08B28CB9F91004C50A8 /* AccountSummaryViewController.swift */; };
 		F887D08E28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F887D08D28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift */; };
 		F887D09028CBDC10004C50A8 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F887D08F28CBDC10004C50A8 /* AccountSummaryHeaderView.xib */; };
+		F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */; };
 		F8BB98FB289F358200A6535B /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB98FA289F358200A6535B /* LocalState.swift */; };
 		F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */; };
 		F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */; };
@@ -43,6 +45,7 @@
 		F8614D1328F9D7D500C5EB2D /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		F866E26E282571F200397F36 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F86CA185290AF0C800BDD8D7 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		F86EC34A2824780A00B94335 /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F86EC34D2824780A00B94335 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F86EC3512824780A00B94335 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		F887D08B28CB9F91004C50A8 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 		F887D08D28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		F887D08F28CBDC10004C50A8 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
+		F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		F8BB98FA289F358200A6535B /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Utils.swift"; sourceTree = "<group>"; };
 		F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				F8BB98FA289F358200A6535B /* LocalState.swift */,
 				F8D981D928EF79C300D8D3B4 /* Decimal+Utils.swift */,
 				F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */,
+				F86CA185290AF0C800BDD8D7 /* NSNotificationName.swift */,
+				F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,9 +304,11 @@
 				F8BB98FB289F358200A6535B /* LocalState.swift in Sources */,
 				F887D08E28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift in Sources */,
 				F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */,
+				F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */,
 				F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */,
+				F86CA186290AF0C800BDD8D7 /* NSNotificationName.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 				F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */,
 				F887D08C28CB9F91004C50A8 /* AccountSummaryViewController.swift in Sources */,
@@ -514,6 +522,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,6 +552,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
