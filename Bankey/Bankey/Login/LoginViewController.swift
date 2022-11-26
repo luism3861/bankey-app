@@ -34,6 +34,14 @@ class LoginViewController: UIViewController {
         return loginView.passwordTextField.text
     }
     
+    var leadingEdgeOnScreen: CGFloat = 16
+    var leadingEdgeOffScreen: CGFloat = -1000
+    
+    
+
+    var imageLeadingAnchor: NSLayoutConstraint?
+    var subtitleLeadingAnchor: NSLayoutConstraint?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
@@ -47,6 +55,11 @@ class LoginViewController: UIViewController {
         loginView.passwordTextField.text = ""
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animate()
+    }
+    
 }
 
 
@@ -56,13 +69,15 @@ extension LoginViewController{
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named:"bank.png")
         imageView.contentMode = .scaleAspectFit
+        imageView.alpha = 0
         
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.textAlignment = .center
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
         subtitleLabel.adjustsFontSizeToFitWidth = true
-        subtitleLabel.text = "Your premium source for all things banking!."
-        
+        subtitleLabel.numberOfLines = 0
+        subtitleLabel.text = "Your premium source for all things banking!"
+
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -91,15 +106,21 @@ extension LoginViewController{
         //Image Layout
         NSLayoutConstraint.activate([
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 1),
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageView.trailingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor),
         ])
+        
+        imageLeadingAnchor = imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: leadingEdgeOffScreen)
+        imageLeadingAnchor?.isActive = true
+        
         
         //Subtitle layout
         NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
-            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
+        
+        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: leadingEdgeOffScreen)
+        subtitleLeadingAnchor?.isActive = true
         
         //LoginView Layout
         NSLayoutConstraint.activate([
@@ -121,13 +142,13 @@ extension LoginViewController{
             errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
             errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
-        
     }
 }
 
 extension LoginViewController{
     @objc func signInTapped(sender: UIButton){
         errorMessageLabel.isHidden = true
+        animatePassword()
         login()
     }
     
@@ -147,6 +168,8 @@ extension LoginViewController{
             delegate?.didLogin()
         }else{
             configureView("Incorrect Username / Password")
+            loginView.userNameTextField.text = ""
+            loginView.passwordTextField.text = ""
         }
     }
     
@@ -155,9 +178,36 @@ extension LoginViewController{
         errorMessageLabel.text = message
     }
     
+    
+    func animatePassword() {
+        let animation = CAKeyframeAnimation()
+        animation.keyPath = "position.x"
+        animation.values = [0, 10, -10, 10, 0]
+        animation.keyTimes = [0, 0.16, 0.5, 0.83, 1]
+        animation.duration = 0.4
+
+        animation.isAdditive = true
+        loginView.passwordTextField.layer.add(animation, forKey: "shake")
+        loginView.userNameTextField.layer.add(animation, forKey: "shake")
+    }
 }
 
-
+extension LoginViewController{
+    private func animate(){
+        let duration = 0.8
+        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut){
+            self.imageLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+            self.view.layoutIfNeeded()
+        }
+        animator1.startAnimation()
+        let animator2 = UIViewPropertyAnimator(duration: duration*2,curve:.easeInOut){
+            self.imageView.alpha = 1
+            self.view.layoutIfNeeded()
+        }
+        animator2.startAnimation(afterDelay: 0.6)
+    }
+}
 
 
 
