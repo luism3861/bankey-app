@@ -148,7 +148,6 @@ extension LoginViewController{
 extension LoginViewController{
     @objc func signInTapped(sender: UIButton){
         errorMessageLabel.isHidden = true
-        animatePassword()
         login()
     }
     
@@ -175,11 +174,12 @@ extension LoginViewController{
     
     private func configureView(_ message: String){
         errorMessageLabel.isHidden = false
+        animateShake()
         errorMessageLabel.text = message
     }
     
     
-    func animatePassword() {
+    func animateShake() {
         let animation = CAKeyframeAnimation()
         animation.keyPath = "position.x"
         animation.values = [0, 10, -10, 10, 0]
@@ -187,8 +187,7 @@ extension LoginViewController{
         animation.duration = 0.4
 
         animation.isAdditive = true
-        loginView.passwordTextField.layer.add(animation, forKey: "shake")
-        loginView.userNameTextField.layer.add(animation, forKey: "shake")
+        signInButton.layer.add(animation, forKey: "shake")
     }
 }
 
