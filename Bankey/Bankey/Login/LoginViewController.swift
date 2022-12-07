@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
     var leadingEdgeOffScreen: CGFloat = -1000
     
     
-
+    
     var imageLeadingAnchor: NSLayoutConstraint?
     var subtitleLeadingAnchor: NSLayoutConstraint?
     
@@ -77,7 +77,7 @@ extension LoginViewController{
         subtitleLabel.adjustsFontSizeToFitWidth = true
         subtitleLabel.numberOfLines = 0
         subtitleLabel.text = "Your premium source for all things banking!"
-
+        
         loginView.translatesAutoresizingMaskIntoConstraints = false
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -156,14 +156,14 @@ extension LoginViewController{
             assertionFailure("Username / password should never be nil")
             return
         }
+        //
+        //        if username.isEmpty || password.isEmpty{
+        //            configureView("Username / password cannot be blank!")
+        //            return
+        //        }
         
-        if username.isEmpty || password.isEmpty{
-            configureView("Username / password cannot be blank!")
-            return
-        }
-        
-        if username == "Luism3861" && password == "1234"{
-           signInButton.configuration?.showsActivityIndicator = true
+        if username == "" && password == ""{
+            signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         }else{
             configureView("Incorrect Username / Password")
@@ -185,7 +185,7 @@ extension LoginViewController{
         animation.values = [0, 10, -10, 10, 0]
         animation.keyTimes = [0, 0.16, 0.5, 0.83, 1]
         animation.duration = 0.4
-
+        
         animation.isAdditive = true
         signInButton.layer.add(animation, forKey: "shake")
     }

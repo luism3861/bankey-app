@@ -14,14 +14,14 @@ class AccountSummaryCell: UITableViewCell{
         case CreditCard
         case Investment
     }
-  
+    
     
     struct ViewModel{
         let accountType: AccountType
         let accountName: String
         let balance: Decimal // new
         var balanceAsAttributedString: NSAttributedString {
-               return CurrencyFormatter().makeAttributedCurrency(balance)
+            return CurrencyFormatter().makeAttributedCurrency(balance)
         }
     }
     
@@ -79,7 +79,7 @@ extension AccountSummaryCell{
         balanceLabel.font = UIFont.preferredFont(forTextStyle: .body)
         balanceLabel.textAlignment = .right
         balanceLabel.adjustsFontSizeToFitWidth = true
-
+        
         
         
         //balanceAmountLabel
