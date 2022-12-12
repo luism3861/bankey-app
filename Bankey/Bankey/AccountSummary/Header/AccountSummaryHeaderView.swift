@@ -45,7 +45,7 @@ class AccountSummaryHeaderView: UIView{
         
         NSLayoutConstraint.activate([
             shakeyBellView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            shakeyBellView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            shakeyBellView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
 }
