@@ -124,7 +124,7 @@ extension AccountSummaryViewController {
     
     private func configureTableHeaderView(with profile: Profile) {
         let vm = AccountSummaryHeaderView.ViewModel(welcomeMessage: "Good morning,",
-                                                    name: profile.firstName,
+                                                    name: profile.lastName,
                                                     date: Date())
         headerView.configure(with: vm)
     }

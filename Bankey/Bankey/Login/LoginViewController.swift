@@ -17,7 +17,7 @@ protocol LoginViewControllerDelegate: AnyObject{
 }
 
 class LoginViewController: UIViewController {
-    var imageView = UIImageView()
+    let imageView = UIImageView()
     let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
@@ -115,7 +115,7 @@ extension LoginViewController{
         
         //Subtitle layout
         NSLayoutConstraint.activate([
-            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
             subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
         
@@ -157,12 +157,12 @@ extension LoginViewController{
             return
         }
         
-        if username.isEmpty || password.isEmpty{
-            configureView("Username / password cannot be blank!")
-            return
-        }
+//        if username.isEmpty || password.isEmpty{
+//            configureView("Username / password cannot be blank!")
+//            return
+//        }
         
-        if username == "Luism3861" && password == "1234"{
+        if username == "" && password == ""{
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         }else{
