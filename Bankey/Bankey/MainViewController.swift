@@ -18,7 +18,7 @@ class MainViewController: UITabBarController {
     private func setupViews() {
         let summaryVC = AccountSummaryViewController()
         let moneyVC = AnotherPage()
-        let moreVC = TestViewControllerr()
+        let moreVC = TestViewController()
         
         summaryVC.setTabBarImage("list.dash.header.rectangle", "Summary")
         moneyVC.setTabBarImage("arrow.left.arrow.right", "Move Money")

@@ -9,8 +9,8 @@ import UIKit
 
 
 
-class TestViewControllerr: UIViewController {
+class TestViewController: UIViewController {
     override func viewDidLoad() {
-        view.backgroundColor = .red
+        view.backgroundColor = appColor
     }
 }

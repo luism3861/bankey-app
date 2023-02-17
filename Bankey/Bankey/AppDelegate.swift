@@ -34,12 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
     }
     
-    
-    
-    private func displayLogin(){
-        setRootViewController(loginViewController)
-    }
-    
     private func displayNextScreen(){
         if LocalState.hasOnboarded{
             prepMainView()

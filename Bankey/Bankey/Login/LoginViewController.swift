@@ -21,7 +21,9 @@ class LoginViewController: UIViewController {
     let subtitleLabel = UILabel()
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
+    let authenticationButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
+    private let biometricIDAuth =  BiometicIDAuth()
     
     
     weak var delegate: LoginViewControllerDelegate?
@@ -88,6 +90,13 @@ extension LoginViewController{
         signInButton.setTitle("Sign In", for: [])
         signInButton.addTarget(self, action: #selector(signInTapped), for: .primaryActionTriggered)
         
+        authenticationButton.translatesAutoresizingMaskIntoConstraints = false
+        authenticationButton.configuration = .filled()
+        authenticationButton.configuration?.baseBackgroundColor = .systemCyan
+        authenticationButton.layer.cornerRadius =  5
+        authenticationButton.setTitle("Authenticate", for: [])
+        authenticationButton.addTarget(self, action: #selector(authenticateTapped), for: .primaryActionTriggered)
+        
         errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.textColor = .red
@@ -101,6 +110,7 @@ extension LoginViewController{
         view.addSubview(subtitleLabel)
         view.addSubview(loginView)
         view.addSubview(signInButton)
+        view.addSubview(authenticationButton)
         view.addSubview(errorMessageLabel)
         
         //Image Layout
@@ -136,6 +146,13 @@ extension LoginViewController{
             signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
         
+        //Button Authentication
+        NSLayoutConstraint.activate([
+            authenticationButton.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 5),
+            authenticationButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            authenticationButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
+        ])
+        
         //Error Label
         NSLayoutConstraint.activate([
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
@@ -151,18 +168,38 @@ extension LoginViewController{
         login()
     }
     
+    @objc func authenticateTapped(){
+        biometricIDAuth.canEvaluate { (canEvaluate, _, canEvaluateError) in
+            guard canEvaluate else {
+                // Face ID/Touch ID may not be available or configured
+                return
+            }
+            biometricIDAuth.evaluate { [weak self] (success, error) in
+                guard success else {
+                    // Face ID/Touch ID may not be configured
+                    return
+                }
+                if success{
+                    DispatchQueue.main.async {
+                        self?.delegate?.didLogin()
+                    }
+                }
+            }
+        }
+    }
+    
     private func login(){
         guard let username = username,let password = password else{
             assertionFailure("Username / password should never be nil")
             return
         }
         
-//        if username.isEmpty || password.isEmpty{
-//            configureView("Username / password cannot be blank!")
-//            return
-//        }
+        //        if username.isEmpty || password.isEmpty{
+        //            configureView("Username / password cannot be blank!")
+        //            return
+        //        }
         
-        if username == "" && password == ""{
+        if username == "Luism3861" && password == "1234"{
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         }else{

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F8026AD0294D552100EC5571 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8026ACF294D552100EC5571 /* Date+Utils.swift */; };
 		F8026AD2294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */; };
+		F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8164124299708C9008A2733 /* SkeletonLoadable.swift */; };
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
 		F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845C2C4285EA1800090C15A /* OnboardingViewController.swift */; };
 		F84F32C429512C3A0002E582 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F32C329512C3A0002E582 /* TestViewController.swift */; };
@@ -31,6 +32,7 @@
 		F8BB98FB289F358200A6535B /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB98FA289F358200A6535B /* LocalState.swift */; };
 		F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */; };
 		F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */; };
+		F8D54D43298D7DC600E4C4A5 /* BiometricIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D54D42298D7DC600E4C4A5 /* BiometricIDAuth.swift */; };
 		F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D981D928EF79C300D8D3B4 /* Decimal+Utils.swift */; };
 		F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,7 @@
 /* Begin PBXFileReference section */
 		F8026ACF294D552100EC5571 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
+		F8164124299708C9008A2733 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F845C2C4285EA1800090C15A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F84F32C329512C3A0002E582 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		F8BB98FA289F358200A6535B /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Utils.swift"; sourceTree = "<group>"; };
 		F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F8D54D42298D7DC600E4C4A5 /* BiometricIDAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricIDAuth.swift; sourceTree = "<group>"; };
 		F8D981D928EF79C300D8D3B4 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */,
+				F8164124299708C9008A2733 /* SkeletonLoadable.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				F86CA185290AF0C800BDD8D7 /* NSNotificationName.swift */,
 				F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */,
 				F8026ACF294D552100EC5571 /* Date+Utils.swift */,
+				F8D54D42298D7DC600E4C4A5 /* BiometricIDAuth.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */,
 				F8026AD0294D552100EC5571 /* Date+Utils.swift in Sources */,
 				F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */,
+				F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */,
 				F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */,
@@ -382,6 +389,7 @@
 				F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */,
 				F8026AD2294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift in Sources */,
 				F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */,
+				F8D54D43298D7DC600E4C4A5 /* BiometricIDAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
