@@ -199,7 +199,7 @@ extension LoginViewController{
         //            return
         //        }
         
-        if username == "Luism3861" && password == "1234"{
+        if username == "" && password == ""{
             signInButton.configuration?.showsActivityIndicator = true
             delegate?.didLogin()
         }else{

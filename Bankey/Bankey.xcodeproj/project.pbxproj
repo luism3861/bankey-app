@@ -11,6 +11,7 @@
 		F8026AD2294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */; };
 		F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8164124299708C9008A2733 /* SkeletonLoadable.swift */; };
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
+		F82B7350299FEAE20074BE45 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B734F299FEAE20074BE45 /* SkeletonCell.swift */; };
 		F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845C2C4285EA1800090C15A /* OnboardingViewController.swift */; };
 		F84F32C429512C3A0002E582 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F32C329512C3A0002E582 /* TestViewController.swift */; };
 		F8614D1428F9D7D500C5EB2D /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8614D1328F9D7D500C5EB2D /* CurrencyFormatterTests.swift */; };
@@ -52,6 +53,7 @@
 		F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		F8164124299708C9008A2733 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		F82B734F299FEAE20074BE45 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		F845C2C4285EA1800090C15A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		F84F32C329512C3A0002E582 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F8614D0A28F9D3DA00C5EB2D /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */,
 				F8164124299708C9008A2733 /* SkeletonLoadable.swift */,
+				F82B734F299FEAE20074BE45 /* SkeletonCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			files = (
 				F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */,
 				F84F32C429512C3A0002E582 /* TestViewController.swift in Sources */,
+				F82B7350299FEAE20074BE45 /* SkeletonCell.swift in Sources */,
 				F866E26F282571F200397F36 /* LoginView.swift in Sources */,
 				F8BB98FB289F358200A6535B /* LocalState.swift in Sources */,
 				F887D08E28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift in Sources */,
