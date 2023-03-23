@@ -42,18 +42,21 @@ extension AccountSummaryViewController{
         let url = URL(string: "https://fierce-retreat-36855.herokuapp.com/bankey/profile/\(userId)")!
         URLSession.shared.dataTask(with: url){data, response, error in
             DispatchQueue.main.async {
-                guard let data = data, error == nil else {
-                    completion(.failure(.serverError))
+                guard let data = data, error == nil,let response = response as? HTTPURLResponse else {
                     return
                 }
                 do {
                     let profile = try JSONDecoder().decode(Profile.self, from: data)
                     completion(.success(profile))
                 } catch {
-                    completion(.failure(.decodingError))
+                    switch response.statusCode{
+                    case 500...599:
+                        completion(.failure(.serverError))
+                    default:
+                        completion(.failure(.decodingError))
+                    }
                 }
             }
-            
         }.resume()
     }
 }
@@ -64,8 +67,7 @@ extension AccountSummaryViewController{
         let url = URL(string: "https://fierce-retreat-36855.herokuapp.com/bankey/profile/\(userId)/accounts")!
         URLSession.shared.dataTask(with: url){data, response, error in
             DispatchQueue.main.async {
-                guard let data = data, error == nil else {
-                    completion(.failure(.serverError))
+                guard let data = data, error == nil, let response = response as? HTTPURLResponse else {
                     return
                 }
                 do {
@@ -74,7 +76,12 @@ extension AccountSummaryViewController{
                     let accounts = try decoder.decode([Account].self, from: data)
                     completion(.success(accounts))
                 } catch {
-                    completion(.failure(.decodingError))
+                    switch response.statusCode{
+                    case 500...599:
+                        completion(.failure(.serverError))
+                    default:
+                        completion(.failure(.decodingError))
+                    }
                 }
             }
         }.resume()
