@@ -25,7 +25,7 @@ struct Product: Codable{
 
 extension TestViewController{
     func fetchProducts(completion: @escaping(Result<[Product],ErrorNetworkProducts>) -> Void){
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        let url = URL(string: "https://fakestoreapi.com/products")!
         URLSession.shared.dataTask(with: url){data, response , error in
             DispatchQueue.main.async{
                 guard let data = data, error == nil, let response = response as? HTTPURLResponse else

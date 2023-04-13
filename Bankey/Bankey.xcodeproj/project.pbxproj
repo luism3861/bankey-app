@@ -32,6 +32,7 @@
 		F890424F296B9CD700FD4CDA /* AnotherPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890424E296B9CD700FD4CDA /* AnotherPage.swift */; };
 		F8A09E8E293AA66A00ECC64F /* ShakeyBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A09E8D293AA66A00ECC64F /* ShakeyBellView.swift */; };
 		F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */; };
+		F8AACC6D29D6494C008663B4 /* AnotherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AACC6C29D6494C008663B4 /* AnotherData.swift */; };
 		F8BB98FB289F358200A6535B /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB98FA289F358200A6535B /* LocalState.swift */; };
 		F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */; };
 		F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */; };
@@ -80,6 +81,7 @@
 		F890424E296B9CD700FD4CDA /* AnotherPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherPage.swift; sourceTree = "<group>"; };
 		F8A09E8D293AA66A00ECC64F /* ShakeyBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeyBellView.swift; sourceTree = "<group>"; };
 		F8A69E232911E17A009A5148 /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		F8AACC6C29D6494C008663B4 /* AnotherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherData.swift; sourceTree = "<group>"; };
 		F8BB98FA289F358200A6535B /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Utils.swift"; sourceTree = "<group>"; };
 		F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				F890424E296B9CD700FD4CDA /* AnotherPage.swift */,
+				F8AACC6C29D6494C008663B4 /* AnotherData.swift */,
 			);
 			path = AnotherPage;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 				F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */,
 				F8FB9A6C29C3C7F700676F32 /* SkeletonCellProducts.swift in Sources */,
+				F8AACC6D29D6494C008663B4 /* AnotherData.swift in Sources */,
 				F887D08C28CB9F91004C50A8 /* AccountSummaryViewController.swift in Sources */,
 				F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */,
 				F8026AD2294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift in Sources */,
