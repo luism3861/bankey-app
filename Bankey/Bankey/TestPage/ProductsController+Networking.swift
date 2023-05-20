@@ -23,7 +23,7 @@ struct Product: Codable{
 }
 
 
-extension TestViewController{
+extension ProductsViewController{
     func fetchProducts(completion: @escaping(Result<[Product],ErrorNetworkProducts>) -> Void){
         let url = URL(string: "https://fakestoreapi.com/products")!
         URLSession.shared.dataTask(with: url){data, response , error in

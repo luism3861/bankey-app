@@ -110,6 +110,7 @@ extension AccountSummaryViewController: UITableViewDataSource{
         
         if isLoaded{
             let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath) as! AccountSummaryCell
+            cell.selectionStyle = .none
             cell.configure(with: accountCellViewModels[indexPath.row])
             return cell
         }
@@ -125,7 +126,7 @@ extension AccountSummaryViewController: UITableViewDataSource{
 
 extension AccountSummaryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(TestViewController(), animated: true)
+        navigationController?.pushViewController(ProductsViewController(), animated: true)
     }
 }
 

@@ -12,10 +12,10 @@
 		F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8164124299708C9008A2733 /* SkeletonLoadable.swift */; };
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
 		F82B7350299FEAE20074BE45 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B734F299FEAE20074BE45 /* SkeletonCell.swift */; };
-		F837A50229BCE4CF0055CC84 /* TestViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837A50129BCE4CF0055CC84 /* TestViewController+Networking.swift */; };
+		F837A50229BCE4CF0055CC84 /* ProductsController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */; };
 		F837A50429BD36000055CC84 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837A50329BD36000055CC84 /* ProductCell.swift */; };
 		F845C2C5285EA1800090C15A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845C2C4285EA1800090C15A /* OnboardingViewController.swift */; };
-		F84F32C429512C3A0002E582 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F32C329512C3A0002E582 /* TestViewController.swift */; };
+		F84F32C429512C3A0002E582 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F32C329512C3A0002E582 /* ProductsViewController.swift */; };
 		F8614D1428F9D7D500C5EB2D /* CurrencyFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8614D1328F9D7D500C5EB2D /* CurrencyFormatterTests.swift */; };
 		F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */; };
 		F866E26F282571F200397F36 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F866E26E282571F200397F36 /* LoginView.swift */; };
@@ -41,7 +41,11 @@
 		F8D54D43298D7DC600E4C4A5 /* BiometricIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D54D42298D7DC600E4C4A5 /* BiometricIDAuth.swift */; };
 		F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D981D928EF79C300D8D3B4 /* Decimal+Utils.swift */; };
 		F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */; };
+		F8D9B2C82A0EF35100918BF4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */; };
+		F8D9B2CC2A0EF38300918BF4 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */; };
 		F8FB9A6C29C3C7F700676F32 /* SkeletonCellProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB9A6B29C3C7F700676F32 /* SkeletonCellProducts.swift */; };
+		F8FBFD132A12E9A900CA6000 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFD122A12E9A900CA6000 /* CameraViewController.swift */; };
+		F8FBFD162A15465D00CA6000 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFD152A15465D00CA6000 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +64,10 @@
 		F8164124299708C9008A2733 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F82B734F299FEAE20074BE45 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
-		F837A50129BCE4CF0055CC84 /* TestViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestViewController+Networking.swift"; sourceTree = "<group>"; };
+		F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsController+Networking.swift"; sourceTree = "<group>"; };
 		F837A50329BD36000055CC84 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		F845C2C4285EA1800090C15A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		F84F32C329512C3A0002E582 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F84F32C329512C3A0002E582 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		F8614D0A28F9D3DA00C5EB2D /* BankeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8614D1328F9D7D500C5EB2D /* CurrencyFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatterTests.swift; sourceTree = "<group>"; };
 		F8657AF728D14CA600AE3E04 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -92,7 +96,11 @@
 		F8D54D42298D7DC600E4C4A5 /* BiometricIDAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricIDAuth.swift; sourceTree = "<group>"; };
 		F8D981D928EF79C300D8D3B4 /* Decimal+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Utils.swift"; sourceTree = "<group>"; };
 		F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		F8FB9A6B29C3C7F700676F32 /* SkeletonCellProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCellProducts.swift; sourceTree = "<group>"; };
+		F8FBFD122A12E9A900CA6000 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		F8FBFD152A15465D00CA6000 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				F8FB9A6A29C272FF00676F32 /* Cells */,
-				F84F32C329512C3A0002E582 /* TestViewController.swift */,
-				F837A50129BCE4CF0055CC84 /* TestViewController+Networking.swift */,
+				F84F32C329512C3A0002E582 /* ProductsViewController.swift */,
+				F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */,
 			);
 			path = TestPage;
 			sourceTree = "<group>";
@@ -175,6 +183,8 @@
 			children = (
 				F86EC3512824780A00B94335 /* LoginViewController.swift */,
 				F866E26E282571F200397F36 /* LoginView.swift */,
+				F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */,
+				F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -202,6 +212,8 @@
 			children = (
 				F86EC34D2824780A00B94335 /* AppDelegate.swift */,
 				F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */,
+				F8FBFD142A15464900CA6000 /* Settings */,
+				F8FBFD112A12E97800CA6000 /* Camera */,
 				F84F32C229512C110002E582 /* TestPage */,
 				F890424D296B9CB500FD4CDA /* AnotherPage */,
 				F866E26D282571B800397F36 /* Login */,
@@ -291,6 +303,22 @@
 				F8FB9A6B29C3C7F700676F32 /* SkeletonCellProducts.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F8FBFD112A12E97800CA6000 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFD122A12E9A900CA6000 /* CameraViewController.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F8FBFD142A15464900CA6000 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F8FBFD152A15465D00CA6000 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */,
-				F84F32C429512C3A0002E582 /* TestViewController.swift in Sources */,
+				F84F32C429512C3A0002E582 /* ProductsViewController.swift in Sources */,
 				F82B7350299FEAE20074BE45 /* SkeletonCell.swift in Sources */,
 				F8B7E3B429E9CB91001A243C /* ProfileManager.swift in Sources */,
 				F866E26F282571F200397F36 /* LoginView.swift in Sources */,
@@ -420,11 +448,15 @@
 				F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */,
 				F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */,
 				F837A50429BD36000055CC84 /* ProductCell.swift in Sources */,
+				F8D9B2C82A0EF35100918BF4 /* PasswordResetViewController.swift in Sources */,
+				F8FBFD132A12E9A900CA6000 /* CameraViewController.swift in Sources */,
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
-				F837A50229BCE4CF0055CC84 /* TestViewController+Networking.swift in Sources */,
+				F837A50229BCE4CF0055CC84 /* ProductsController+Networking.swift in Sources */,
 				F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */,
 				F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */,
+				F8FBFD162A15465D00CA6000 /* SettingsViewController.swift in Sources */,
 				F86CA186290AF0C800BDD8D7 /* NSNotificationName.swift in Sources */,
+				F8D9B2CC2A0EF38300918BF4 /* PasswordTextField.swift in Sources */,
 				F86EC34E2824780A00B94335 /* AppDelegate.swift in Sources */,
 				F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */,
 				F8FB9A6C29C3C7F700676F32 /* SkeletonCellProducts.swift in Sources */,

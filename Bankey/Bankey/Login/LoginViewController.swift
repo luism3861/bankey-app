@@ -22,6 +22,7 @@ class LoginViewController: UIViewController {
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
     let authenticationButton = UIButton(type: .system)
+    let resetPasswordButton = UIButton(type: .system)
     let errorMessageLabel = UILabel()
     private let biometricIDAuth =  BiometicIDAuth()
     
@@ -97,6 +98,10 @@ extension LoginViewController{
         authenticationButton.setTitle("Authenticate", for: [])
         authenticationButton.addTarget(self, action: #selector(authenticateTapped), for: .primaryActionTriggered)
         
+        resetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
+        resetPasswordButton.setTitle("Password Reset", for: [])
+        resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .primaryActionTriggered)
+        
         errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         errorMessageLabel.textAlignment = .center
         errorMessageLabel.textColor = .red
@@ -111,6 +116,7 @@ extension LoginViewController{
         view.addSubview(loginView)
         view.addSubview(signInButton)
         view.addSubview(authenticationButton)
+        view.addSubview(resetPasswordButton)
         view.addSubview(errorMessageLabel)
         
         //Image Layout
@@ -148,15 +154,21 @@ extension LoginViewController{
         
         //Button Authentication
         NSLayoutConstraint.activate([
-            authenticationButton.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 5),
+            authenticationButton.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
             authenticationButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
             authenticationButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            resetPasswordButton.topAnchor.constraint(equalToSystemSpacingBelow: authenticationButton.bottomAnchor, multiplier: 2),
+            resetPasswordButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            resetPasswordButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
         
         //Error Label
         NSLayoutConstraint.activate([
             errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
-            errorMessageLabel.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
+            errorMessageLabel.centerXAnchor.constraint(equalTo: signInButton.leadingAnchor),
             errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
     }
@@ -187,6 +199,12 @@ extension LoginViewController{
             }
         }
     }
+
+    
+    @objc func resetPasswordTapped(){
+        self.present(PasswordResetViewController(), animated: true, completion:nil)
+    }
+    
     
     private func login(){
         guard let username = username,let password = password else{

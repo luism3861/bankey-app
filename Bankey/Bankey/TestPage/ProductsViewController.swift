@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class TestViewController: UIViewController {
+class ProductsViewController: UIViewController {
     var products: [Product] = []
     var productCellViewModels: [ProductCell.ViewModelProduct] = []
     var tableView = UITableView()
@@ -23,7 +23,7 @@ class TestViewController: UIViewController {
     }
 }
 
-extension TestViewController{
+extension ProductsViewController{
     private func setup(){
         title = "Products"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -35,7 +35,7 @@ extension TestViewController{
 }
 
 
-extension TestViewController{
+extension ProductsViewController{
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -67,13 +67,14 @@ extension TestViewController{
     }
 }
 
-extension TestViewController: UITableViewDataSource{
+extension ProductsViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard !productCellViewModels.isEmpty else {
             return UITableViewCell()
         }
         if isLoaded{
             let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseIDProduct, for: indexPath) as! ProductCell
+            cell.selectionStyle = .none
             cell.configure(with: productCellViewModels[indexPath.row])
             return cell
         }
@@ -90,14 +91,14 @@ extension TestViewController: UITableViewDataSource{
     
 }
 
-extension TestViewController: UITableViewDelegate{
+extension ProductsViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationController?.pushViewController(AnotherPage(), animated: true)
     }
 }
 
 
-extension TestViewController{
+extension ProductsViewController{
     private func fetchData(){
         
         fetchProducts() { result in
@@ -144,7 +145,7 @@ extension TestViewController{
 }
 
 
-extension TestViewController{
+extension ProductsViewController{
     @objc func refreshContent(){
         reset()
         setupSkeletons()

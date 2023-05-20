@@ -17,21 +17,24 @@ class MainViewController: UITabBarController {
     
     private func setupViews() {
         let summaryVC = AccountSummaryViewController()
-        let moneyVC = AnotherPage()
-        let moreVC = TestViewController()
+        let cameraVC = CameraViewController()
+        let productVC = ProductsViewController()
+        let settingVC = SettingsViewController()
         
         summaryVC.setTabBarImage("list.dash.header.rectangle", "Summary")
-        moneyVC.setTabBarImage("arrow.left.arrow.right", "Move Money")
-        moreVC.setTabBarImage("ellipsis.circle", "More")
+        cameraVC.setTabBarImage("camera", "Camera")
+        productVC.setTabBarImage("ellipsis.circle", "More")
+        settingVC.setTabBarImage("gear", "Settings")
         
         let summaryNC = UINavigationController(rootViewController: summaryVC)
-        let moneyNC = UINavigationController(rootViewController: moneyVC)
-        let moreNC = UINavigationController(rootViewController: moreVC)
+        let cameraNC = UINavigationController(rootViewController: cameraVC)
+        let productNC = UINavigationController(rootViewController: productVC)
+        let settingNC = UINavigationController(rootViewController: settingVC)
         
         summaryNC.navigationBar.barTintColor = appColor
         hideNavigationBarLine(summaryNC.navigationBar)
         
-        let tabBarList = [summaryNC, moneyNC, moreNC]
+        let tabBarList = [summaryNC, cameraNC, productNC, settingNC]
         
         viewControllers = tabBarList
     }
