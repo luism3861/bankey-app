@@ -10,6 +10,7 @@
 		F8026AD0294D552100EC5571 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8026ACF294D552100EC5571 /* Date+Utils.swift */; };
 		F8026AD2294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */; };
 		F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8164124299708C9008A2733 /* SkeletonLoadable.swift */; };
+		F817ED392A19AEFD0054B0F1 /* PasswordCriteriaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F817ED382A19AEFD0054B0F1 /* PasswordCriteriaView.swift */; };
 		F8280DBA2835B55E001AAEC8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */; };
 		F82B7350299FEAE20074BE45 /* SkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82B734F299FEAE20074BE45 /* SkeletonCell.swift */; };
 		F837A50229BCE4CF0055CC84 /* ProductsController+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */; };
@@ -62,6 +63,7 @@
 		F8026ACF294D552100EC5571 /* Date+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		F8026AD1294D5B6B00EC5571 /* AccountSummaryViewController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountSummaryViewController+Networking.swift"; sourceTree = "<group>"; };
 		F8164124299708C9008A2733 /* SkeletonLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadable.swift; sourceTree = "<group>"; };
+		F817ED382A19AEFD0054B0F1 /* PasswordCriteriaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteriaView.swift; sourceTree = "<group>"; };
 		F8280DB92835B55E001AAEC8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		F82B734F299FEAE20074BE45 /* SkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCell.swift; sourceTree = "<group>"; };
 		F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsController+Networking.swift"; sourceTree = "<group>"; };
@@ -121,6 +123,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F817ED372A19AEB70054B0F1 /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */,
+				F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */,
+				F817ED382A19AEFD0054B0F1 /* PasswordCriteriaView.swift */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
 		F8280DB82835B471001AAEC8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,8 +195,6 @@
 			children = (
 				F86EC3512824780A00B94335 /* LoginViewController.swift */,
 				F866E26E282571F200397F36 /* LoginView.swift */,
-				F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */,
-				F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -213,6 +223,7 @@
 				F86EC34D2824780A00B94335 /* AppDelegate.swift */,
 				F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */,
 				F8FBFD142A15464900CA6000 /* Settings */,
+				F817ED372A19AEB70054B0F1 /* Password */,
 				F8FBFD112A12E97800CA6000 /* Camera */,
 				F84F32C229512C110002E582 /* TestPage */,
 				F890424D296B9CB500FD4CDA /* AnotherPage */,
@@ -445,6 +456,7 @@
 				F8A09E8E293AA66A00ECC64F /* ShakeyBellView.swift in Sources */,
 				F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */,
 				F8026AD0294D552100EC5571 /* Date+Utils.swift in Sources */,
+				F817ED392A19AEFD0054B0F1 /* PasswordCriteriaView.swift in Sources */,
 				F8A69E242911E17A009A5148 /* UITextField+SecureToggle.swift in Sources */,
 				F8164125299708C9008A2733 /* SkeletonLoadable.swift in Sources */,
 				F837A50429BD36000055CC84 /* ProductCell.swift in Sources */,

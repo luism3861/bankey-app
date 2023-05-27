@@ -99,7 +99,7 @@ extension LoginViewController{
         authenticationButton.addTarget(self, action: #selector(authenticateTapped), for: .primaryActionTriggered)
         
         resetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
-        resetPasswordButton.setTitle("Password Reset", for: [])
+        resetPasswordButton.setTitle("Forgot Password", for: [])
         resetPasswordButton.addTarget(self, action: #selector(resetPasswordTapped), for: .primaryActionTriggered)
         
         errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -121,6 +121,7 @@ extension LoginViewController{
         
         //Image Layout
         NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: imageView.bottomAnchor, multiplier: 1),
             imageView.trailingAnchor.constraint(equalTo: subtitleLabel.trailingAnchor),
         ])
@@ -148,13 +149,20 @@ extension LoginViewController{
         //Button Layout
         NSLayoutConstraint.activate([
             signInButton.topAnchor.constraint(equalToSystemSpacingBelow: loginView.bottomAnchor, multiplier: 3),
-            signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
-            signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
+            signInButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 3),
+            view.trailingAnchor.constraint(equalToSystemSpacingAfter: signInButton.trailingAnchor, multiplier: 3)
+        ])
+        
+        //Error Label
+        NSLayoutConstraint.activate([
+            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 1),
+            errorMessageLabel.centerXAnchor.constraint(equalTo: signInButton.centerXAnchor),
+            errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
         
         //Button Authentication
         NSLayoutConstraint.activate([
-            authenticationButton.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
+            authenticationButton.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 5),
             authenticationButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
             authenticationButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
@@ -163,13 +171,6 @@ extension LoginViewController{
             resetPasswordButton.topAnchor.constraint(equalToSystemSpacingBelow: authenticationButton.bottomAnchor, multiplier: 2),
             resetPasswordButton.leadingAnchor.constraint(equalTo: signInButton.leadingAnchor),
             resetPasswordButton.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
-        ])
-        
-        //Error Label
-        NSLayoutConstraint.activate([
-            errorMessageLabel.topAnchor.constraint(equalToSystemSpacingBelow: signInButton.bottomAnchor, multiplier: 2),
-            errorMessageLabel.centerXAnchor.constraint(equalTo: signInButton.leadingAnchor),
-            errorMessageLabel.trailingAnchor.constraint(equalTo: signInButton.trailingAnchor)
         ])
     }
 }
@@ -212,13 +213,14 @@ extension LoginViewController{
             return
         }
         
-        //        if username.isEmpty || password.isEmpty{
-        //            configureView("Username / password cannot be blank!")
-        //            return
-        //        }
+        if username.isEmpty || password.isEmpty{
+            configureView("Username / password cannot be blank!")
+            return
+        }
         
-        if username == "" && password == ""{
+        if username == "Luism3861" && password == "1234"{
             signInButton.configuration?.showsActivityIndicator = true
+            errorMessageLabel.isHidden = true
             delegate?.didLogin()
         }else{
             configureView("Incorrect Username / Password")
