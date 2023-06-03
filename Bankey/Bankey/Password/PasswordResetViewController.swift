@@ -11,7 +11,7 @@ class PasswordResetViewController: UIViewController {
     
     let newPasswordTextField = PasswordTextField(placeHolderText: "New Password")
     let stackView = UIStackView()
-    let criteriaView = PasswordCriteriaView()
+    let criteriaView = PasswordCriteriaView("uppercase letter (A-Z) ")
     
     override func viewDidLoad() {
         super.viewDidLoad()

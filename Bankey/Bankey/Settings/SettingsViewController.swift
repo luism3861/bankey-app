@@ -7,9 +7,37 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController{
+class SettingsViewController: UITableViewController{
+    private var viewModel: SettingsViewModel!
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemCyan
+        title = "Settings"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        view.backgroundColor = .secondarySystemBackground
+        viewModel = SettingsViewModel(delegate: self)
+        tableView.delegate = viewModel
+        tableView.dataSource = viewModel
+    }
+}
+
+
+extension SettingsViewController: SettingsViewModelDelegate{
+    func twitterCellTapped(){
+        if let url = URL(string: "https://twitter.com"){
+            if UIApplication.shared.canOpenURL(url){
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    func facebookCellTapped(){
+        if let url = URL(string: "https://fb.com"){
+            if UIApplication.shared.canOpenURL(url){
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
     }
 }
