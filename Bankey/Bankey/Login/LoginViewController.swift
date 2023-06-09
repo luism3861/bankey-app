@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+        prepMainViewDisable()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -202,8 +203,8 @@ extension LoginViewController{
     }
 
     
-    @objc func resetPasswordTapped(){
-        self.present(PasswordResetViewController(), animated: true, completion:nil)
+    @objc func resetPasswordTapped(sender: UIButton){
+        navigationController?.pushViewController(PasswordResetViewController(), animated: true)
     }
     
     

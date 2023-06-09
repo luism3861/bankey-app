@@ -46,6 +46,7 @@
 		F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */; };
 		F8D9B2C82A0EF35100918BF4 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */; };
 		F8D9B2CC2A0EF38300918BF4 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */; };
+		F8F2FA6C2A2FFEFE00C1E539 /* PasswordStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F2FA6B2A2FFEFE00C1E539 /* PasswordStatusView.swift */; };
 		F8FB9A6C29C3C7F700676F32 /* SkeletonCellProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FB9A6B29C3C7F700676F32 /* SkeletonCellProducts.swift */; };
 		F8FBFD132A12E9A900CA6000 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFD122A12E9A900CA6000 /* CameraViewController.swift */; };
 		F8FBFD162A15465D00CA6000 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FBFD152A15465D00CA6000 /* SettingsViewController.swift */; };
@@ -104,6 +105,7 @@
 		F8D981DB28EF79D600D8D3B4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
 		F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		F8F2FA6B2A2FFEFE00C1E539 /* PasswordStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStatusView.swift; sourceTree = "<group>"; };
 		F8FB9A6B29C3C7F700676F32 /* SkeletonCellProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonCellProducts.swift; sourceTree = "<group>"; };
 		F8FBFD122A12E9A900CA6000 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		F8FBFD152A15465D00CA6000 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				F8D9B2C72A0EF35100918BF4 /* PasswordResetViewController.swift */,
 				F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */,
 				F817ED382A19AEFD0054B0F1 /* PasswordCriteriaView.swift */,
+				F8F2FA6B2A2FFEFE00C1E539 /* PasswordStatusView.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				F887D08E28CBDBBF004C50A8 /* AccountSummaryHeaderView.swift in Sources */,
 				F890424F296B9CD700FD4CDA /* AnotherPage.swift in Sources */,
 				F8A09E8E293AA66A00ECC64F /* ShakeyBellView.swift in Sources */,
+				F8F2FA6C2A2FFEFE00C1E539 /* PasswordStatusView.swift in Sources */,
 				F8D981DC28EF79D600D8D3B4 /* CurrencyFormatter.swift in Sources */,
 				F8026AD0294D552100EC5571 /* Date+Utils.swift in Sources */,
 				F817ED392A19AEFD0054B0F1 /* PasswordCriteriaView.swift in Sources */,

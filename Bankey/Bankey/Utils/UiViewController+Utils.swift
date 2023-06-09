@@ -23,4 +23,9 @@ extension UIViewController{
         let image = UIImage(systemName: imageName, withConfiguration: configuration)
         tabBarItem = UITabBarItem(title: title, image: image, tag: 0)
     }
+    
+     func prepMainViewDisable(){
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+    }
 }

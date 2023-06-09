@@ -36,14 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func displayNextScreen(){
         if LocalState.hasOnboarded{
-            prepMainView()
             setRootViewController(loginViewController)
         }else{
             setRootViewController(onboardingContainerViewController)
         }
     }
     
-    private func prepMainView(){
+    public func prepMainView(){
         mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
@@ -54,13 +53,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate{
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        let navigationController = UINavigationController(rootViewController: vc)
+
         guard animated, let window = self.window else {
-            self.window?.rootViewController = vc
+            self.window?.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
             return
         }
         
-        window.rootViewController = vc
+        
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
         UIView.transition(with: window,
                           duration: 0.5,
@@ -73,11 +75,12 @@ extension AppDelegate{
 
 extension AppDelegate: LoginViewControllerDelegate{
     func didLogin() {
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
+       
         setRootViewController(mainViewController)
     }
 }
-
-
 
 extension AppDelegate: OnboardingContainerViewControllerDelegate{
     func didFinishOnboarding() {
@@ -90,6 +93,9 @@ extension AppDelegate: OnboardingContainerViewControllerDelegate{
 
 extension AppDelegate: LogoutDelegate{
     @objc func didLogout() {
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = .systemBackground
+
         setRootViewController(loginViewController)
     }
 }

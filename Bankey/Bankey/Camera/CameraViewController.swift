@@ -16,6 +16,7 @@ class CameraViewController: UIViewController{
         super.viewDidLoad()
         style()
         layout()
+        prepMainViewDisable()
     }
     
     

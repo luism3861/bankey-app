@@ -7,18 +7,25 @@
 
 import UIKit
 
+
+
 class PasswordResetViewController: UIViewController {
     
     let newPasswordTextField = PasswordTextField(placeHolderText: "New Password")
     let stackView = UIStackView()
-    let criteriaView = PasswordCriteriaView("uppercase letter (A-Z) ")
+    let statusView = PasswordStatusView()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Password Reset"
+
         style()
         layout()
+        prepMainViewDisable()
     }
+    
+  
 }
 
 
@@ -31,12 +38,13 @@ extension PasswordResetViewController{
         stackView.axis = .vertical
         stackView.spacing = 20
         
-        criteriaView.translatesAutoresizingMaskIntoConstraints = false
+        
+        statusView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func layout(){
 //        stackView.addArrangedSubview(newPasswordTextField)
-        stackView.addArrangedSubview(criteriaView)
+        stackView.addArrangedSubview(statusView)
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
