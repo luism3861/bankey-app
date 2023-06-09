@@ -85,7 +85,6 @@ extension AppDelegate: LoginViewControllerDelegate{
 extension AppDelegate: OnboardingContainerViewControllerDelegate{
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        prepMainView()
         setRootViewController(loginViewController)
     }
 }

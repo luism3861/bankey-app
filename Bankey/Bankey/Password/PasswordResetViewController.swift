@@ -12,8 +12,10 @@ import UIKit
 class PasswordResetViewController: UIViewController {
     
     let newPasswordTextField = PasswordTextField(placeHolderText: "New Password")
+    let confirmPasswordTextField = PasswordTextField(placeHolderText: "Re-enter new password")
     let stackView = UIStackView()
     let statusView = PasswordStatusView()
+    let resetButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         view.backgroundColor = .systemBackground
@@ -32,6 +34,14 @@ class PasswordResetViewController: UIViewController {
 extension PasswordResetViewController{
     func style(){
         newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        confirmPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.configuration = .filled()
+        resetButton.setTitle("Reset Password", for: [])
+        // resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
+
       
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -40,11 +50,16 @@ extension PasswordResetViewController{
         
         
         statusView.translatesAutoresizingMaskIntoConstraints = false
+        statusView.layer.cornerRadius = 5
+        statusView.clipsToBounds = true
     }
     
     func layout(){
-//        stackView.addArrangedSubview(newPasswordTextField)
+        stackView.addArrangedSubview(newPasswordTextField)
         stackView.addArrangedSubview(statusView)
+        stackView.addArrangedSubview(confirmPasswordTextField)
+        stackView.addArrangedSubview(resetButton)
+
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
