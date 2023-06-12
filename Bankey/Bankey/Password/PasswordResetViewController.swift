@@ -24,7 +24,6 @@ class PasswordResetViewController: UIViewController {
 
         style()
         layout()
-        prepMainViewDisable()
     }
     
   

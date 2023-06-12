@@ -42,12 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    public func prepMainView(){
-        mainViewController.setStatusBar()
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().backgroundColor = appColor
-    }
-    
 }
 
 
@@ -75,8 +69,7 @@ extension AppDelegate{
 
 extension AppDelegate: LoginViewControllerDelegate{
     func didLogin() {
-        UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().backgroundColor = appColor
+      
        
         setRootViewController(mainViewController)
     }

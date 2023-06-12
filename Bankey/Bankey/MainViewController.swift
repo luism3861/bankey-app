@@ -31,7 +31,6 @@ class MainViewController: UITabBarController {
         let productNC = UINavigationController(rootViewController: productVC)
         let settingNC = UINavigationController(rootViewController: settingVC)
         
-        summaryNC.navigationBar.barTintColor = appColor
         hideNavigationBarLine(summaryNC.navigationBar)
         
         let tabBarList = [summaryNC, cameraNC, productNC, settingNC]

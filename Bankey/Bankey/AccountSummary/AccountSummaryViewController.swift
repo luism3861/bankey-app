@@ -40,6 +40,7 @@ class AccountSummaryViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         setup()
     }
     
@@ -59,7 +60,6 @@ extension AccountSummaryViewController{
 
 extension AccountSummaryViewController{
     private func setupTableView(){
-        tableView.backgroundColor = appColor
         tableView.delegate = self
         tableView.dataSource = self
         

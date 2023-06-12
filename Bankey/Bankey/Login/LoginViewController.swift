@@ -49,7 +49,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
-        prepMainViewDisable()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -133,7 +132,7 @@ extension LoginViewController{
         
         //Subtitle layout
         NSLayoutConstraint.activate([
-            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 4),
+            loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 2),
             subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
         
@@ -204,7 +203,7 @@ extension LoginViewController{
 
     
     @objc func resetPasswordTapped(sender: UIButton){
-        navigationController?.pushViewController(PasswordResetViewController(), animated: true)
+        navigationController?.present(PasswordResetViewController(), animated: true, completion: nil)
     }
     
     

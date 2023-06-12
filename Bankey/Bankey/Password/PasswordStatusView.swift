@@ -41,6 +41,7 @@ extension PasswordStatusView{
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 8
+        stackView.distribution = .equalCentering
         
         lengthCriteriaView.translatesAutoresizingMaskIntoConstraints = false
         upperCaseCriteriaView.translatesAutoresizingMaskIntoConstraints = false
