@@ -118,7 +118,7 @@ extension ProductsViewController{
     
     private func configureTableProductsCells(with products: [Product]) {
         productCellViewModels = products.map {
-            ProductCell.ViewModelProduct(titleProduct: $0.title)
+            ProductCell.ViewModelProduct(nameComment: $0.name)
         }
     }
     

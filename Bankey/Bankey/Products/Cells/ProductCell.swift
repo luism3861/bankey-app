@@ -10,11 +10,11 @@ import UIKit
 
 class ProductCell: UITableViewCell{
     struct ViewModelProduct{
-        let titleProduct: String
+        let nameComment: String
     }
     
     let viewModel: ViewModelProduct? = nil
-    let titleProductLabel = UILabel()
+    let nameProductLabel = UILabel()
     
     static let reuseIDProduct = "ProductCell"
     static let rowHeight: CGFloat = 80
@@ -33,16 +33,16 @@ class ProductCell: UITableViewCell{
 
 extension ProductCell{
     private func setup(){
-        titleProductLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleProductLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
-        titleProductLabel.adjustsFontForContentSizeCategory = true
-        contentView.addSubview(titleProductLabel)
+        nameProductLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameProductLabel.font = UIFont.preferredFont(forTextStyle: .caption1)
+        nameProductLabel.adjustsFontForContentSizeCategory = true
+        contentView.addSubview(nameProductLabel)
     }
     
     private func layout(){
         NSLayoutConstraint.activate([
-            titleProductLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
-            titleProductLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2)
+            nameProductLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 2),
+            nameProductLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2)
         ])
     }
 }
@@ -50,6 +50,6 @@ extension ProductCell{
 
 extension ProductCell{
     func configure(with viewModel: ViewModelProduct){
-        titleProductLabel.text = viewModel.titleProduct
+        nameProductLabel.text = viewModel.nameComment
     }
 }

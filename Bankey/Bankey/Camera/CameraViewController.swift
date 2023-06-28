@@ -58,9 +58,9 @@ class CameraViewController: UIViewController{
 extension CameraViewController{
     @objc func tappedButton(_ sender: UIButton){
         let picker = UIImagePickerController()
-        picker.sourceType = .camera
+        picker.sourceType = UIImagePickerController.SourceType.camera
         picker.delegate = self
-        present(picker, animated: true)
+        present(picker, animated: true, completion: nil)
     }
 }
 

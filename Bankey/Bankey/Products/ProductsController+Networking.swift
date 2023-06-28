@@ -15,24 +15,23 @@ enum ErrorNetworkProducts: Error{
 }
 
 struct Product: Codable{
-    let title: String
+    let name: String
     
     static func makeSkeleton() -> Product{
-        return Product(title: "Test")
+        return Product(name: "Test")
     }
 }
 
 
 extension ProductsViewController{
     func fetchProducts(completion: @escaping(Result<[Product],ErrorNetworkProducts>) -> Void){
-        let url = URL(string: "https://fakestoreapi.com/products")!
+        let url = URL(string: "https://jsonplaceholder.typicode.com/comments")!
         URLSession.shared.dataTask(with: url){data, response , error in
             DispatchQueue.main.async{
                 guard let data = data, error == nil, let response = response as? HTTPURLResponse else
                 {
                     return
                 }
-                
                 do{
                     let decoder = JSONDecoder()
                     let products = try decoder.decode([Product].self, from: data)

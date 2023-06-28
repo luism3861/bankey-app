@@ -49,6 +49,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         style()
         layout()
+        dissmissKeyboard()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -203,7 +204,7 @@ extension LoginViewController{
 
     
     @objc func resetPasswordTapped(sender: UIButton){
-        navigationController?.present(PasswordResetViewController(), animated: true, completion: nil)
+        navigationController?.pushViewController(PasswordResetViewController(), animated: true)
     }
     
     
@@ -213,20 +214,13 @@ extension LoginViewController{
             return
         }
         
-//        if username.isEmpty || password.isEmpty{
-//            configureView("Username / password cannot be blank!")
-//            return
-//        }
-        
-        if username == "" && password == ""{
-            signInButton.configuration?.showsActivityIndicator = true
-            errorMessageLabel.isHidden = true
-            delegate?.didLogin()
-        }else{
-            configureView("Incorrect Username / Password")
-            loginView.userNameTextField.text = ""
-            loginView.passwordTextField.text = ""
+        if username.isEmpty || password.isEmpty{
+            configureView("Username / password cannot be blank!")
+            return
         }
+        
+        makePostCall(username,password)
+        
     }
     
     private func configureView(_ message: String){
@@ -267,3 +261,54 @@ extension LoginViewController{
 
 
 
+extension LoginViewController{
+    func makePostCall(_ user: String,_ pass: String) {
+        let todosEndpoint: String = "http://10.100.3.59:8080/dev/login"
+        guard let todosURL = URL(string: todosEndpoint) else {
+            Swift.print("Error: cannot create URL")
+            return
+        }
+        var todosUrlRequest = URLRequest(url: todosURL)
+        todosUrlRequest.httpMethod = "POST"
+        todosUrlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField:"Content-Type")
+        let newTodo: [String: Any] = ["user": user, "pass": pass, "idSistema": "4"]
+        let jsonTodo: Data
+        do {
+            jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
+            todosUrlRequest.httpBody = jsonTodo
+        } catch {
+            Swift.print("Error: cannot create JSON from todo")
+            return
+        }
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: todosUrlRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                Swift.print("error calling POST on /todos/1")
+                Swift.print(error!)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                return
+            }
+            switch httpResponse.statusCode{
+            case 200:
+                DispatchQueue.main.async {
+                    self.delegate?.didLogin()
+                }
+            case 400...450  :
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Error", message: "username or password incorrect", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK",  style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            default:
+                print("Error")
+            }
+        }
+        task.resume()
+    }
+}

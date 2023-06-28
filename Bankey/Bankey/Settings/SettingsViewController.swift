@@ -26,7 +26,7 @@ class SettingsViewController: UITableViewController{
 
 extension SettingsViewController: SettingsViewModelDelegate{
     func twitterCellTapped(){
-        if let url = URL(string: "https://twitter.com"){
+        if let url = URL(string: "https://twitter.com/luism3861"){
             if UIApplication.shared.canOpenURL(url){
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
@@ -34,7 +34,7 @@ extension SettingsViewController: SettingsViewModelDelegate{
     }
     
     func facebookCellTapped(){
-        if let url = URL(string: "https://fb.com"){
+        if let url = URL(string: "https://fb.com/luism3861"){
             if UIApplication.shared.canOpenURL(url){
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }

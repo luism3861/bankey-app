@@ -36,6 +36,7 @@
 		F8AACC6D29D6494C008663B4 /* AnotherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AACC6C29D6494C008663B4 /* AnotherData.swift */; };
 		F8B7E3B429E9CB91001A243C /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7E3B329E9CB91001A243C /* ProfileManager.swift */; };
 		F8B7E3B629E9D52D001A243C /* AccountSummaryViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B7E3B529E9D52D001A243C /* AccountSummaryViewControllerTest.swift */; };
+		F8BB5F722A3A35A0001E66E4 /* PasswordCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB5F712A3A35A0001E66E4 /* PasswordCriteria.swift */; };
 		F8BB98FB289F358200A6535B /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BB98FA289F358200A6535B /* LocalState.swift */; };
 		F8C58D5D28B977EE00D6D1F7 /* UiViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */; };
 		F8C58D5F28B97B1E00D6D1F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */; };
@@ -95,6 +96,7 @@
 		F8AACC6C29D6494C008663B4 /* AnotherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherData.swift; sourceTree = "<group>"; };
 		F8B7E3B329E9CB91001A243C /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		F8B7E3B529E9D52D001A243C /* AccountSummaryViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewControllerTest.swift; sourceTree = "<group>"; };
+		F8BB5F712A3A35A0001E66E4 /* PasswordCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCriteria.swift; sourceTree = "<group>"; };
 		F8BB98FA289F358200A6535B /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		F8C58D5C28B977EE00D6D1F7 /* UiViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiViewController+Utils.swift"; sourceTree = "<group>"; };
 		F8C58D5E28B97B1E00D6D1F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				F8D9B2CB2A0EF38300918BF4 /* PasswordTextField.swift */,
 				F817ED382A19AEFD0054B0F1 /* PasswordCriteriaView.swift */,
 				F8F2FA6B2A2FFEFE00C1E539 /* PasswordStatusView.swift */,
+				F8BB5F712A3A35A0001E66E4 /* PasswordCriteria.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -149,14 +152,14 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		F84F32C229512C110002E582 /* TestPage */ = {
+		F84F32C229512C110002E582 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				F8FB9A6A29C272FF00676F32 /* Cells */,
 				F84F32C329512C3A0002E582 /* ProductsViewController.swift */,
 				F837A50129BCE4CF0055CC84 /* ProductsController+Networking.swift */,
 			);
-			path = TestPage;
+			path = Products;
 			sourceTree = "<group>";
 		};
 		F8614D0B28F9D3DA00C5EB2D /* BankeyUnitTests */ = {
@@ -232,7 +235,7 @@
 				F8FBFD142A15464900CA6000 /* Settings */,
 				F817ED372A19AEB70054B0F1 /* Password */,
 				F8FBFD112A12E97800CA6000 /* Camera */,
-				F84F32C229512C110002E582 /* TestPage */,
+				F84F32C229512C110002E582 /* Products */,
 				F890424D296B9CB500FD4CDA /* AnotherPage */,
 				F866E26D282571B800397F36 /* Login */,
 				F8280DB82835B471001AAEC8 /* Onboarding */,
@@ -475,6 +478,7 @@
 				F86EC3522824780A00B94335 /* LoginViewController.swift in Sources */,
 				F837A50229BCE4CF0055CC84 /* ProductsController+Networking.swift in Sources */,
 				F8D981DA28EF79C300D8D3B4 /* Decimal+Utils.swift in Sources */,
+				F8BB5F722A3A35A0001E66E4 /* PasswordCriteria.swift in Sources */,
 				F8657AF828D14CA600AE3E04 /* AccountSummaryCell.swift in Sources */,
 				F8FBFD162A15465D00CA6000 /* SettingsViewController.swift in Sources */,
 				F86CA186290AF0C800BDD8D7 /* NSNotificationName.swift in Sources */,

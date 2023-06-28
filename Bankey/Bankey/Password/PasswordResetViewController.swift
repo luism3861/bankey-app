@@ -21,7 +21,7 @@ class PasswordResetViewController: UIViewController {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Password Reset"
-
+        dissmissKeyboard()
         style()
         layout()
     }
@@ -31,21 +31,26 @@ class PasswordResetViewController: UIViewController {
 
 
 extension PasswordResetViewController{
+    
+  
+    
     func style(){
         newPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        newPasswordTextField.delegate = self
         
         confirmPasswordTextField.translatesAutoresizingMaskIntoConstraints = false
+        
         
         resetButton.translatesAutoresizingMaskIntoConstraints = false
         resetButton.configuration = .filled()
         resetButton.setTitle("Reset Password", for: [])
-        // resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
+//         resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
 
       
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 20
+        stackView.spacing = 10
         
         
         statusView.translatesAutoresizingMaskIntoConstraints = false
@@ -70,3 +75,10 @@ extension PasswordResetViewController{
 }
 
 
+extension PasswordResetViewController: PasswordTextFieldDelegate{
+    func editingChanged(_ sender: PasswordTextField){
+        if sender == newPasswordTextField{
+            statusView.updateDisplay(sender.textField.text ?? "")
+        }
+    }
+}
