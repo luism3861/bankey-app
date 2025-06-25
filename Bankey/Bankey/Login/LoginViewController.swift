@@ -263,7 +263,7 @@ extension LoginViewController{
 
 extension LoginViewController{
     func makePostCall(_ user: String,_ pass: String) {
-        let todosEndpoint: String = "http://10.100.3.59:8080/dev/login"
+        let todosEndpoint: String = ""
         guard let todosURL = URL(string: todosEndpoint) else {
             Swift.print("Error: cannot create URL")
             return
@@ -271,7 +271,7 @@ extension LoginViewController{
         var todosUrlRequest = URLRequest(url: todosURL)
         todosUrlRequest.httpMethod = "POST"
         todosUrlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField:"Content-Type")
-        let newTodo: [String: Any] = ["user": user, "pass": pass, "idSistema": "4"]
+        // let newTodo: [String: Any] = ["user": user, "pass": pass, "idSistema": "4"]
         let jsonTodo: Data
         do {
             jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
